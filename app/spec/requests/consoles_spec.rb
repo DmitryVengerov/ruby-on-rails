@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Console requests' do
 
-	url = '/api/consoles'
+	let(:url) {'/api/consoles'}
 	let(:json) { JSON.parse(response.body)}
 
 	describe 'GET /consoles' do
