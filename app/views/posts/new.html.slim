@@ -1,0 +1,25 @@
+.title
+  h1 Live Blog
+  p Editor View
+div style="text-align:center" 
+  p
+    strong Fill and submit the form below to create a new post
+  #error
+    - if @post.errors.any?
+      - @post.errors.full_messages.each do |message|
+        p = message
+  = form_for @post do |f|
+    .post-form
+      = token_tag 
+      .form-group
+        label for="title" Title
+        = f.text_field :title, class: 'form-control'
+      .form-group
+        label for="author"  Post Author
+        = f.text_field :author, class: 'form-control'
+      .form-group
+        label for="body"  Post Content
+        = f.text_area :body, class: 'form-control', size: "30x10"
+      .from-group
+        div
+          = f.submit value: "Create Post"

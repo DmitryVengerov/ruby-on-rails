@@ -1,0 +1,14 @@
+.wrapper
+  .title
+    h1 =t("blog_title")
+    p New posts will be displayed in realtime
+    = link_to "Crete new post", new_post_path
+  #post_section.posts
+    - @posts.each do |post| 
+    	= link_to("/posts/#{post.id}")
+		    .post-card
+		      .title
+		        h2 = post.title 
+		      .body-trunc
+		        p = post.body 
+	     

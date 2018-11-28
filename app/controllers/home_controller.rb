@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@post = Post.all.orser('created_at DESC')
+  	@posts = Post.all.order('created_at DESC')
   end
 end
