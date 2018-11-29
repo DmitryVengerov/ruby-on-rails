@@ -1,16 +1,45 @@
+input, textarea {
+    outline: none;
+    border: 1px solid rgb(238, 238, 238);
+}
+
+
 .post-form {
     display: flex;
-    width: 50%;
+    width: 80%;
     flex-direction: column;
     margin: 20px auto;
 }
 
 .form-group {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 5px 0px;
-    align-items: center;
+    text-align: left;
 }
+
+.form-group label {
+    padding-bottom: 20px;
+}
+
+.form-group input {
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.form-group textarea{
+    font-size: 16px;
+    padding: 14px 8px;
+    width: 500px !important;
+    margin-bottom: 20px;
+
+}
+
+.form-group:last {
+    
+}
+
 
 input[type="submit"] {
     background-color: #333333;
@@ -27,6 +56,21 @@ article {
     padding: 20px 30px;
     background: #fff;
     margin-top: 50px !important;
+    width: 650px;
+    height: auto;
+    margin: auto;
+}
+
+.form-new {
+    padding: 20px 30px;
+    background: #fff;
+    margin-top: 50px !important;
+    width: 650px;
+    height: auto;
+    margin: auto;
+}
+
+.form-edit {
     width: 650px;
     height: auto;
     margin: auto;
@@ -54,10 +98,11 @@ article {
     height: 40px;
     background: #4f5965;
     position: absolute;
-    margin-left: 25%;
+    margin-left: 20%;
     border-radius: 4px;
-     display:flex;
+    display:flex;
 }
+
 .back-arrow svg {
     margin: auto;
     height: 16px;
@@ -75,4 +120,5 @@ article {
 .like {
     margin-top: 180px;
 }
+
 

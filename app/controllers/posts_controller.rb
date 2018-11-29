@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-before_action :find_post, only: %i[show edit destroy]
+before_action :find_post, only: %i[show edit destroy update]
 
   def new
   	@post = Post.new
@@ -24,7 +24,12 @@ before_action :find_post, only: %i[show edit destroy]
   end
 
   def update
-
+    if @post.update(post_params)
+      redirect_to post_path(@post), notice: t(".updated")
+    else
+      render :edit
+    end
+    # binding.pry
   end
 
   private 
@@ -34,6 +39,7 @@ before_action :find_post, only: %i[show edit destroy]
   end
 
   def find_post
+        # binding.pry
   	@post = Post.find(params[:id])
   end
 

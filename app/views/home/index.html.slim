@@ -1,14 +1,17 @@
 .wrapper
   .title
-    h1 =t("blog_title")
-    p New posts will be displayed in realtime
-    = link_to "Crete new post", new_post_path
+    = link_to "Crete new post", new_post_path, class:'new-post_btn'
+
   #post_section.posts
     - @posts.each do |post| 
     	= link_to("/posts/#{post.id}")
 		    .post-card
 		      .title
-		        h2 = post.title 
+		        span = post.title 
 		      .body-trunc
-		        p = post.body 
+		        p = post.body.gsub(/^(.{300,}?).*$/m,'\1...')
+		      .post-info
+		      	span class='post-author' = post.author
+		      	span class='post-data' = post.created_at.strftime('%B')
+		      	 
 	     

@@ -10,7 +10,21 @@ end
 = link_to root_path, class: 'back-arrow like' do
   = inline_svg 'like.svg'
 end
+
 article
-  .title = @post.title
-  .author = @post.author
-  .post_body = @post.body
+  .form-edit
+		= form_for @post, :url => { :method => "post" ,:action => "update" } do |f|
+		  .post-form
+		    = token_tag 
+		    .form-group
+		      label for="title" Title
+		      = f.text_field :title, class: 'form-control'
+		    .form-group
+		      label for="author"  Post Author
+		      = f.text_field :author, class: 'form-control'
+		    .form-group
+		      label for="body"  Post Content
+		      = f.text_area :body, class: 'form-control', size: "30x10"
+		    .from-group
+		      = f.submit value: "Edit Post"
+	

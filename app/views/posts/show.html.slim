@@ -1,8 +1,10 @@
 = link_to root_path, class: 'back-arrow' do
   = inline_svg 'left-arrow.svg'
+end
 
 = link_to edit_post_path, class: 'back-arrow edit' do
   = inline_svg 'edit.svg'
+end
 
 = link_to "/posts/#{@post.id}", method: :delete, class: 'back-arrow delete' do
   = inline_svg 'delete.svg'
@@ -11,6 +13,7 @@ end
 = link_to root_path, class: 'back-arrow like' do
   = inline_svg 'like.svg'
 end
+
 article
   .title = @post.title
   .author = @post.author

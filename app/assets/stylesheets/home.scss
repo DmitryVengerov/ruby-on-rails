@@ -1,18 +1,21 @@
 * {
     font-family: "Lora", serif;
     font-family: "Helvetica Neue";
-        text-decoration: none;
+    text-decoration: none;
+}
+
+button {
+    outline: none;
 }
 
 body {
     background: #E0E5EB;
 }
 
-h2 {
-    font-weight: lighter;
-    font-size: 28px;
-    margin-left: 10px;
-    margin-right: 10px;
+span {
+    font-size: 26px;
+   
+    font-weight: 400;
 }
 
 p {
@@ -25,20 +28,17 @@ p {
 
 .posts {
     margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
 }
 
 .post-card {
-    padding: 32px 24px;
+    padding:  24px 32px;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 400px;
+    width: 600px;
     margin: 20px 0px;
     cursor: pointer;
+    color: #000000;
     background: #fff;
     text-decoration: none;
 }
@@ -49,6 +49,59 @@ p {
 }
 
 .body-trunc {
-    margin-left: 50px;
-    margin-right: 50px;
+    
+}
+
+.wrapper {
+    width: 1024px;
+    margin: auto;
+}
+
+.new-post_btn {
+    font-size: 16px;
+    background-color: #4689FD;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.post-card .title {
+    margin-top: 0px;
+} 
+
+.body-trunc p {
+    font-size: 18px;
+}
+
+.post-author {
+    font-size: 16px;
+}
+
+.post-data {
+    font-size: 18px;
+}
+
+.post-info {
+    display: flex;
+        justify-content: space-between;
+}
+
+.alert {
+    position: absolute;
+    padding: 10px 30px;
+    background: #03040452;
+    border-radius: 4px;
+    color: #fff;
+    dislpay: flex;
+}
+
+.alert button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.alert-success {
+    background: #34AA53
 }
